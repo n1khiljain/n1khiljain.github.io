@@ -9,12 +9,18 @@ body {
   background: #f6f7f9;
   color: #222;
   line-height: 1.6;
+  padding-top: 64px; /* adjust this value to match your navbar's height */
 }
 
 .navbar {
   background: #344e41;
   padding: 1rem 0;
   box-shadow: 0 2px 8px rgba(52, 78, 65, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it stays above other content */
 }
 
 .navbar ul {
@@ -35,6 +41,37 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: #a3b18a;
+}
+
+.container {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+}
+
+.container > .job {
+  max-width: auto;
+  margin: 0.74rem;
+  padding: 2rem;
+  background: #e1e0e0;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(52, 78, 65, 0.07);
+}
+
+.job:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+
+.company-title {
+  font-size: 1.7rem;
+}
+
+.job-title {
+  font-size: 1.1rem;
+}
+
+.job-description {
+  font-size: 1.05rem;
+  color: #444;
 }
 
 .no-decoration {
